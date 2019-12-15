@@ -1,0 +1,52 @@
+-> '/professional_login/', methods = ['POST']
+json_fields = ['email', 'password']
+sample json :
+{
+	"email" : "ata@ata.com",
+	"password" : "sifre123"
+}
+responses with:
+{"token": "fIxMYq5IgxbBXV3qlQSKkg"}
+
+->'/customer_login/', methods = ['POST']
+json_fields = ['email', 'password']
+
+{
+    "token": "CKYTNhIF92XikO9l7wel6g",
+    "username": "atagunz"
+}
+
+-> '/professional_register/', methods = ['POST']
+json_fields = ['username', 'password', 'firstname', 'lastname', 'email', 'fields']
+sample json: 'fields' must be an array
+{
+	"username" : "atagunz",
+	"email" : "ata@ata.com",
+	"password" : "sifre123",
+	"firstname" : "atagun",
+	"lastname" : "ogun",
+	"fields" : ["ibnelik", "pustluk"]
+}
+
+-> '/customer_register/', methods = ['POST']
+json_fields = ['username', 'password', 'firstname', 'lastname', 'email']
+sample json:
+{
+	"username" : "sipo",
+	"email" : "sipo@sipo.com",
+	"password" : "sifre123",
+	"firstname" : "deniz",
+	"lastname" : "sipoli"
+}
+{
+    "token": "XcdtHO96q7xggQjYeN8wyg",
+    "username": "atagunz"
+}
+
+-> '/customer_register/', methods = ['POST']
+json_fields = ['username', 'password', 'firstname', 'lastname', 'email']
+
+
+'/professional_profile/', methods = ['GET', 'POST']
+GET request arguments = ['token', 'user_id'] - to view a profile
+POST request jsonfields = ['token', 'user_id', 'username', 'email', 'fields'] - to edit a profile
